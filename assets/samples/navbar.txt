@@ -1,7 +1,7 @@
 **************** HTML *******************
 
   <nav id="navbar">
-    <div class="nav-elements">
+    <div class="nav-elements" id="nav-elements">
       <h2><a href="#">lorem ipsum</a></h2>
       <ul class="nav-links">
         <li><a href="#adapt">Adapt</a></li>
@@ -36,7 +36,7 @@ nav {
   align-items: center;
   width: 90%;
   margin: auto;
-  min-height: 10vh;
+  height: 10vh;
 }
 .nav-elements a {
   color: #333;

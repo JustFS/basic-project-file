@@ -41,7 +41,7 @@ p::first-letter {
 }
 .adapt {
   display: flex;
-  padding: 1rem 1rem 1rem 0;
+  padding: 6rem 1rem 1rem 0;
   margin-bottom: 3rem;
 }
 .dummy-adapt {
@@ -76,12 +76,15 @@ p::first-letter {
   width: 90%;
 }
 
-
 @media screen and (min-width: 1000px) {
   main {
     width: 75%;
     margin: 0 auto;
   }
+  .nav-elements {
+    width: 75%;
+  }
+}
   .nav-elements {
     width: 75%;
   }
