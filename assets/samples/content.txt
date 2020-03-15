@@ -93,3 +93,8 @@ p::first-letter {
     width: 75%;
   }
 }
+@media screen and (max-width: 999px) {
+  main {
+    padding: 0 2rem;
+  }
+}
