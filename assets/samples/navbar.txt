@@ -29,6 +29,7 @@ nav {
   width: 100%;
   background: #34BDFF;
   box-shadow: 0 0 3px #333;
+  position: fixed;
 }
 .nav-elements {
   display: flex;
