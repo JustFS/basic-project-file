@@ -9,7 +9,7 @@
       <img src="/media/svg/undraw_digital_currency_qpak.svg" alt="">
 
     </div>
-    <div class="main-img"></div>
+
     <div class="improvise" id="improvise">
       <h1>Improvise</h1>
       <div class="dummy-improvise">
@@ -50,13 +50,6 @@ p::first-letter {
 }
 .adapt img {
   width: 50%;
-}
-.main-img {
-  background: url(./media/basic-pics/new-york-buildings-city-night-minimalism-4e.jpg) no-repeat center 0%/cover;
-  height: 500px;
-  margin: 2rem auto;
-  border-radius: 4px;
-  box-shadow: 0 0 2px #333;
 }
 .improvise {
   padding: 1rem;
