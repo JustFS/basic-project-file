@@ -1,3 +1,10 @@
+a {
+  display: inline-block;
+  cursor: pointer;
+}
 
+i {
+  height: 2rem;
+}
 
 /*# sourceMappingURL=style.css.map */
