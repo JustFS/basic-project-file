@@ -2,44 +2,37 @@ const searchInput = document.getElementById('searchInput');
 const results = document.getElementById('results');
 const randomMeal = document.getElementById('randomMeal');
 
-search = '';
+[search, meals] = '';
 
 const fetchSearch = async() => {
-	meals = await fetch(
+	meal = await fetch(
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
     .then(res => res.json())
     .then(res => res.meals) 
 };
 
-const getRandomMeal = async() => {
-  randomResult = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/random.php`)
-    .then(res => res.json())
-    .then(res => res.meals)
-}
-
-
 
 const searchDisplay = async() => {
   await fetchSearch();
 
-  if (meals === null){
-    results.innerHTML = 'aucun résultat'
+  if (meal === null){
+    results.innerHTML = `<span class="noResult">Aucun resultat</span>`
   }
   
   results.innerHTML = (
     
-    meals.map(meal => (
+    meal.map(meal => (
             
       `
-        <div class="recipeContainer">
-          <div>${meal.strMeal}</div>
-          <div>from : ${meal.strArea}</div>
-          <div>category : ${meal.strCategory}</div>
-          <p>${meal.strInstructions}</p>
-          <img src='${meal.strMealThumb}' />
-          <a src="${meal.strYoutube}"><i class="fab fa-youtube"></i></a>
+      <div class="searchContainer">
+        <h2>${meal.strMeal}</h2>
+        <div class="infos">
+          <div>origine : ${meal.strArea}</div>
+          <div>catégorie : ${meal.strCategory}</div>
         </div>
+        <img src='${meal.strMealThumb}' /></br>
+        <a href="${meal.strYoutube}" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
       `
     )).join('')
   );
@@ -48,5 +41,40 @@ const searchDisplay = async() => {
 searchInput.addEventListener('input', (e) => {
   search = e.target.value;
   searchDisplay();
-})
-randomMeal.addEventListener('click', searchDisplay)
+});
+
+
+// GET RANDOM MEAL
+const getRandomMeal = async() => {
+  meal = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/random.php`)
+    .then(res => res.json())
+    .then(res => res.meals)
+}
+
+const randomMealDisplay = async() => {
+  await getRandomMeal();
+
+  results.innerHTML = (
+    
+    meal.map(meal => (
+            
+      `
+        <div class="randomContainer">
+          <h2>${meal.strMeal}</h2>
+          <div class="infos">
+            <div>origine : ${meal.strArea}</div>
+            <div>catégorie : ${meal.strCategory}</div>
+          </div>
+          <img src='${meal.strMealThumb}' />
+          <p>${meal.strInstructions}</p>
+          <a href="${meal.strYoutube}" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      `
+    ))
+  );
+};
+
+randomMeal.addEventListener('click', randomMealDisplay)
+
+randomMealDisplay();
