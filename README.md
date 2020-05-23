@@ -1,4 +1,4 @@
-# Fichier de base pour commencer un mini-projet 
+### Fichier de base pour commencer un mini-projet 
 
 Avec : 
 * des photos randoms
