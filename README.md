@@ -3,6 +3,7 @@
 Avec : 
 * des photos randoms
 * une navbar toute faite
+* un body tout fait
 * des sons
-* un contenu tout fait
+* des svg
 * jQuery et Bootstrap reliés
