@@ -7,3 +7,6 @@ Avec :
 * des sons
 * des svg
 * jQuery et Bootstrap reliés
+
+#### Démarrer projet avec Sass 
+* `npm run sass`
