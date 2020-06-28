@@ -1,20 +1,20 @@
 {
-  "name": "starting_file",
+  "name": "basic-project-file",
   "version": "1.0.0",
-  "description": "Wesh alors :)",
-  "main": "js.js",
+  "description": "Avec : \r * des photos randoms\r * une navbar toute faite\r * un body tout fait\r * des sons\r * des svg\r * jQuery et Bootstrap reliés",
+  "main": "script.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "sass" : "sass --watch ./main.scss:./style.css"
   },
-    
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KobeKenjo/basic_project_file.git"
+    "url": "git+https://github.com/JustFS/basic-project-file.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KobeKenjo/basic_project_file/issues"
+    "url": "https://github.com/JustFS/basic-project-file/issues"
   },
-  "homepage": "https://github.com/KobeKenjo/basic_project_file#readme"
+  "homepage": "https://github.com/JustFS/basic-project-file#readme"
 }
